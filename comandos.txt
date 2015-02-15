@@ -1,0 +1,72 @@
+Comandos base de git
+
+configurando git 
+git config --global user.name “TU NOMBRE"
+git config –global user.email “email”
+git config --global color.ui true
+git config – global –list
+git version
+
+
+
+
+git help = ayuda para ver como funconan los diferentes instrucciones
+
+git init= para comenzar el rastreo de mi carpeta con los archivos para subir a los estados de git 
+
+git status = para verificar el estado en que se encuentra git con nuestro carpeta de nuestro proyecto
+
+git add -A= inicia la subida de nuestro proyecto a la segunda fase antes de subir 
+git commit -m “mensaje para los usuario que puedan tener acceso a tu proyecto”= tu proyecto pasa a la parte final ser repositorio y lo usuario que puedan tener acceso a tu proyecto por medio de git podran ver le mensaje que dejes cada vez que vean tu proyecto.
+
+Git log > commit.txt : para crear un txt de todos los commit que hemos realizado a lo largo de proyecto.
+
+Git checkout #(nuemro del commite): nos ayuda a regresar puntualmente al cambio que realizamos a nuestro proyecto en ese instante.
+Git checkout master: regresamos al ultimo de los cambios realizados de nuestro proyecto
+git reset –hard: ojo este comando borra todos los commit tanto para adelante como para atras.
+
+ 
+git commit -am “mensaje para el commit”= una abreviatura de git add -A y git commit -m para subirt rapidamente al repositorio nuestro proyecto.
+
+Git branch nombre de la rama: para crear ramas para no afectar nuestro proyecto principal podemos realizar cambios sin afectar el master de nuestro proyecto
+
+git branch : para ver las ramas que tenemos en nuestro proyecto 
+
+git ckeckout nombre de la rama= igual como movernos dentro de los commit, podemos realizar con el checkout movernos por las ramas de nuestro proyecto master, ramas 1, ramas 2 ramas etc. 
+
+Git log –oneline –graph –all: para ver una grafica de como estan los commit de nuestro proyecto tanto en el master como en el expermental
+
+git config –global alias.nicelog 'log –oneline –graph –all' : creamos un alias para un comando en este ejemplo creamos un alias para la instruccion log –oneline –graph –all, para no escribir toda la instruccion con los alias solo coloco en la consola git nicelog: nicelog es el nombre del alias y nos va hacer lo mismo que con la instruccion completa.
+Git merge [el nombre de la rama (branch)]: realiza la fusion de la rama expermental a la rama master de nuestro proyecto
+
+git branch –merged: en lista las ramas fusionadas 
+git branch -d [nombre de la rama]. Esto borra una rama del nuestro proyecto. Ojo esto realizamos cuando ya no estamos utilizando alguna rama de nuestro proyecto.
+
+Comados de Github
+
+git remote add origin [HTTPS or SSH] para conectar el repositorio local al remoto en github
+git remote -v: para ver el repositrio en las dos atributos que tiene fetch y push
+git commit -am "[Mensaje]"
+git push origin master: empujar el repositorio desde nuestro local a nuestro remoto
+git init (si apenas vamos a iniciar)
+$ git remote add origin [HTTS or SSH]
+$ git fetch origin para espejar nuestro repositorio desde github a nuestro local
+$ git merge origin/master para fusionar nuestro repositorio espejado a nuestro carpeta local
+Hacen cambios
+$ git fetch origin
+$ git merge origin/master
+$ git push origin master
+
+forked
+git remote add origin [HTTPS ó SSH del proyecto forked]
+git remote add upstream [HTTPS ó SSH del proyecto "main"]
+git fetch upstream
+git merge origin/upstream
+git fetch origin
+git merge origin/master
+Hacer cambios en local
+git fetch upstream
+git merge origin/upstream
+git push origin master
+
+
