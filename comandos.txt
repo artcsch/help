@@ -69,4 +69,25 @@ git fetch upstream
 git merge origin/upstream
 git push origin master
 
+Deployment
+
+primero debemos generar la key ssh y eso la generamos con el comando 
+//ssh-keygen
+
+una vez creada la llave en nuestro home senos creara una caprpeta oculta .ssh
+
+ingresamos a la carpeta ocuslta llamada .ssh
+
+ahi tendremos estos archivos
+//id_rsa  id_rsa.pub
+
+el archivo que nos interesa es la key pub 
+//id_rsa.pub
+que sera la llave que deberemos ingresar en github 
+
+abrimos con un editor de texto el que mas utilizemos y copiamos la llave que sera pegada en nuestro github para poder dar ingreso a github por ssh a la conexcion de nuestros proyectos.
+
+de ahi se realizaran las mismos comandos que hemos venido trabajando con git en los ejemplos anteriores enlazando clonadno lso proyectos, subiendo reflejando los commit y las diferente ramas 
+debemos observar que cuando ya se encuentre elazdo nusto repositorio local con github la llave debe estar pintada de color verde indicando que se encuentra enlazado y podemos ir subiendo nuestro cambios del proyecto en el cual estemso trabajando 
+
 
